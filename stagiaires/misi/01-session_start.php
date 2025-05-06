@@ -12,5 +12,5 @@ if(empty($_SESSION["ConnectUnixTime"])){
 // variable global de type $_SESSION 
 var_dump($_SESSION);
 
-echo "<br>" . $_SESSION['CountView']++ .' vues ';
+echo "<br> " . $_SESSION['CountView']++ .' vues ';
 echo 'depuis ' . ( time() - $_SESSION["ConnectUnixTime"]) . "secondes";
