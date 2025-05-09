@@ -1,4 +1,5 @@
 # protection du fichier de configuration de prod
 config-prod.php
 # protection des données dans data
-data/
+/data/*
+!/data/exemple5mvc-structure-datas-01.sql
