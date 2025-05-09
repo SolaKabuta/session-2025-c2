@@ -64,6 +64,10 @@ endif;
 </form>
 <?php
 var_dump($_POST, $_SESSION);
+
+echo $exemple = "lulu";
+echo "<br>";
+echo sha1($exemple);
 ?>
 </body>
 </html>

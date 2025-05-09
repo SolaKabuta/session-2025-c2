@@ -12,9 +12,8 @@ if(empty($_SESSION['idSession'])|| $_SESSION['idSession']!== session_id()){
 
 // on veut se déconnecter
 if(isset($_GET['disconnect'])){
-    # on vide la session de ses valeurs
+    # on vide la session de ses valeurs ou session_unset()
     $_SESSION = [];
-
     # suppression du cookie (par le navigateur)
     if (ini_get("session.use_cookies")) {
         $params = session_get_cookie_params();
@@ -43,9 +42,12 @@ if(isset($_GET['disconnect'])){
 </head>
 <body>
 <h1>Administration</h1>
+<h2>Bienvenue <?=$_SESSION['nom']?></h2>
 <p>Id de session : <?=session_id()?></p>
 <nav>
-    <a href="./">Accueil</a> | <a href="?disconnect">Déconnexion</a>
+    <a href="./">Accueil</a> | <a href="./admin_profile.php">Profil</a> | <a href="?disconnect">Déconnexion</a>
+
 </nav>
+<h3>Accueil de l'administration</h3>
 </body>
 </html>
