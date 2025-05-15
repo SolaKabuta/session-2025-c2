@@ -5,6 +5,7 @@
 
 if(isset($_POST['pwd'])){
     $pwd = $_POST['pwd'];
+    // cryptage par défaut de PHP
     $pwdHash = password_hash($pwd,PASSWORD_DEFAULT );
 }
 ?>
