@@ -4,3 +4,6 @@
 /*
  * Contrôleur frontal
  */
+
+// dépendances
+require_once "../config-dev.php";

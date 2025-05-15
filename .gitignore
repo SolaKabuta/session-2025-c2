@@ -2,3 +2,5 @@
 .idea/
 # Mac
 *.DS_Store
+# fichier de configuration de prod
+config-prod.php
