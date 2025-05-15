@@ -16,5 +16,10 @@
 </nav>
 <h1>Exemple 5 | Connexion</h1>
 <h2>Veuillez vous connecter</h2>
+<form action="" name="connect" method="post">
+    <input type="text" name="userlogin" placeholder="Votre login" required><br>
+    <input type="password" name="userpwd" placeholder="Votre mot de passe" required><br>
+    <input type="submit" value="se connecter">
+</form>
 </body>
 </html>
