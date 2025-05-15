@@ -1,5 +1,7 @@
-# protection du fichier de configuration de prod
+# protection du fichier de configuration de production
 config-prod.php
+# protection du fichier de configuration de tests
+config-test.php
 # protection des données dans data * tout le dossier
 /data/*
 # sauf le fichier ci-dessous

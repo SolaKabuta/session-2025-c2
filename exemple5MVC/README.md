@@ -6,13 +6,13 @@ Importation du fichier `data/exemple5mvc-structure-datas-01.sql` dans votre base
 
 ## Fichiers de configuration
 
-Dupliquer le fichier `config-dev.php` et le renommer en `config-prod.php`. Il se trouve actuellement dans le `.gitignore`
+Dupliquez le fichier `config-dev.php` et renommez-le-en `config-prod.php`. Il se trouve actuellement dans le `.gitignore`, pour des raisons de sécurité.
 
 ## Identifiants
 
 ### Pour se connecter à l'administration
 
-Il faut se connecter avec un des utilisateurs présents dans la base de données.
+Il faudra se connecter avec un des utilisateurs présents dans la base de données.
 
 
 ### Utilisateurs dans la DB
