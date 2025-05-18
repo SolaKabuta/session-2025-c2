@@ -26,8 +26,8 @@ try{
     die($e->getMessage());
 }
 
-// chargement du routeur
-require_once "../controller/RouterController.php";
+// chargement du routeur public
+require_once "../controller/PublicController.php";
 
 
 
