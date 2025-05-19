@@ -26,8 +26,17 @@ try{
     die($e->getMessage());
 }
 
-// chargement du routeur public
-require_once "../controller/PublicController.php";
+// si nous sommes connectés
+if(isset($_SESSION['userlogin']))
+{
+    // nous prenons le contrôleur privé
+    require_once "../controller/PrivateController.php";
+
+// non connectés
+}else {
+    // chargement du routeur public
+    require_once "../controller/PublicController.php";
+}
 
 
 echo '<h4>session_id() ou SID</h4>';
@@ -39,8 +48,7 @@ echo '<h4>$_SESSION</h4>';
 var_dump($_SESSION);
 echo '<h3>$_POST</h3>';
 var_dump($_POST);
-echo '<h4>$connect</h4>';
-var_dump($connect);
+
 
 // bonne pratique
 $db=null;

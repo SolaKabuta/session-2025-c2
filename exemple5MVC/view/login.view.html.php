@@ -1,3 +1,9 @@
+<?php
+if(isset($_SESSION['userlogin'])){
+    header("Location: ./");
+    exit();
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,8 +18,7 @@
 <nav>
     <a href="./">Accueil</a> |
     <a href="./?p=about">A propos</a> |
-    <a href="./?p=connect">Connexion</a> |
-    <a href="./?p=admin">Administration</a> |
+    Connexion |
 </nav>
 <h1>Exemple 5 | Connexion</h1>
 <h2>Veuillez vous connecter</h2>

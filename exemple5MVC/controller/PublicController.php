@@ -3,6 +3,7 @@
 
 // dépendances
 require_once "../model/UserModel.php";
+require_once "../model/ArticleModel.php";
 
 if(isset($_GET['p'])){
     switch ($_GET['p']){
@@ -28,12 +29,14 @@ if(isset($_GET['p'])){
             include "../view/about.view.html.php";
             break;
         default :
+            $articles = getAllArticle($db);
             include "../view/homepage.view.html.php";
     }
 
 
 }else {
 
+    $articles = getAllArticle($db);
 // chargement de la page d'accueil
     include "../view/homepage.view.html.php";
 
