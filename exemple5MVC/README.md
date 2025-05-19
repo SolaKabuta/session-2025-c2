@@ -2,7 +2,7 @@
 
 ## Configuration
 
-Importation du fichier `data/exemple5mvc-structure-datas-01.sql` dans votre base de données MySQL.
+Importation du fichier `data/exemple5mvc-structure-datas-02.sql` dans votre base de données MySQL.
 
 ## Fichiers de configuration
 
@@ -20,4 +20,12 @@ Il faudra se connecter avec un des utilisateurs présents dans la base de donné
 - `admin` | `admin123` | `Pitz Michaël`
 - `modo` | `123modo` | `Sandron Pierre`
 - `user` | `use123r` | `Sall Magib`
+
+### Notre base de donnée `exemple5mvc` en v1
+
+![DB schema](exemple5mvc.png)
+
+### Notre base de donnée `exemple5mvc` en v2
+
+![DB schema](exemple5mvc2.png)
 

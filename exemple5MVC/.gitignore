@@ -6,3 +6,5 @@ config-test.php
 /data/*
 # sauf le fichier ci-dessous
 !/data/exemple5mvc-structure-datas-01.sql
+!/data/exemple5mvc-structure-datas-02.sql
+!/data/exemple5mvc-structure-datas-02-mdb.sql
