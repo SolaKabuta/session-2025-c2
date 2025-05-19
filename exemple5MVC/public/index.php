@@ -38,6 +38,8 @@ echo '<h3>$_SESSION</h3>';
 var_dump($_SESSION);
 echo '<h3>$_POST</h3>';
 var_dump($_POST);
+echo '<h3>$connect</h3>';
+var_dump($connect);
 
 // bonne pratique
 $db=null;
