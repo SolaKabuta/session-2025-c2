@@ -19,6 +19,26 @@ function connectUser(PDO $con, string $login, string $password): bool
         // si on a pas récupéré le login
         if($prepare->rowCount()!==1) return false;
 
+        // récupération des données de l'utilisateur
+        $user = $prepare->fetch();
+
+        // on va vérifier la validité du mot de passe haché
+        // avec password_hash lors de l'insertion dans la DB
+        // en utilisant password_verify()
+        if(password_verify($password,$user['userpwd'])){
+            // mot de passe correct !
+            // on remplit la session avec le
+            // résultat de la requête
+            $_SESSION = $user;
+            // on retire de la session le mot de passe
+            unset($_SESSION['userpwd']);
+            return true;
+        // mot de passe incorrecte
+        }else{
+            return false;
+        }
+
+
     }catch(Exception $e){
         die($e->getMessage());
     }
