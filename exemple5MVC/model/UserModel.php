@@ -7,6 +7,11 @@
  */
 function connectUser(PDO $con, string $login, string $password): bool
 {
+    // par sécurité (extrême) sur les sessions
+    // en cas de tentive de reconnexion, on supprime
+    // l'ancienne session (cookie + fichier texte)
+    // et on régénère un identifiant
+    session_regenerate_id(true);
     // on récupère l'utilisateur via son login
     // le mot de passe doit être vérifié côté PHP
     $sql = "SELECT * FROM `user` u WHERE u.`userlogin` = ?";
@@ -23,7 +28,7 @@ function connectUser(PDO $con, string $login, string $password): bool
         $user = $prepare->fetch();
 
         // on va vérifier la validité du mot de passe haché
-        // avec password_hash lors de l'insertion dans la DB
+        // avec password_hash() lors de l'insertion dans la DB
         // en utilisant password_verify()
         if(password_verify($password,$user['userpwd'])){
             // mot de passe correct !
@@ -42,6 +47,5 @@ function connectUser(PDO $con, string $login, string $password): bool
     }catch(Exception $e){
         die($e->getMessage());
     }
-
-    return true;
+    
 }

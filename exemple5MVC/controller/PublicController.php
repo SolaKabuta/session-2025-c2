@@ -12,6 +12,14 @@ if(isset($_GET['p'])){
             if(isset($_POST["userlogin"],$_POST["userpwd"])){
                 // on va tenter la connexion
                 $connect = connectUser($db,$_POST["userlogin"],$_POST["userpwd"]);
+                // nous sommes bien connectés
+                if($connect===true){
+                    // redirection vers l'accueil
+                    header("Location: ./");
+                    exit();
+                }else{
+                    $error = "Login et/ou mot de passe incorrecte(s)";
+                }
             }
             // appel du formulaire
             include "../view/login.view.html.php";
