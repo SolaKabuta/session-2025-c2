@@ -10,9 +10,20 @@
 <body>
 <nav>
     <a href="./">Accueil</a> |
-    <a href="./?p=about">A propos</a> |
-    <a href="./?p=connect">Connexion</a> |
-    <a href="./?p=admin">Administration</a> |
+    A propos |
+    <?php
+    if(isset($_SESSION['userlogin'])):
+        ?>
+        <a href="./?p=admin">Administration</a> |
+        <a href="./?p=disconnect">Déconnexion</a> | de votre compte <?=$_SESSION['userlogin'] ?>
+
+    <?php
+    else:
+        ?>
+        <a href="./?p=connect">Connexion</a> |
+    <?php
+    endif;
+    ?>
 </nav>
 <h1>Exemple 5 | À propos de nous</h1>
 <h2>CF2m</h2>
