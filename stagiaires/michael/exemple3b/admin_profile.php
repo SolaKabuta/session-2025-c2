@@ -38,16 +38,15 @@ if(isset($_GET['disconnect'])){
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Administration</title>
+    <title>Administration | profile</title>
 </head>
 <body>
 <h1>Administration</h1>
 <h2>Bienvenue <?=$_SESSION['nom']?></h2>
 <p>Id de session : <?=session_id()?></p>
 <nav>
-    <a href="./">Accueil</a> | <a href="./admin_profile.php">Profil</a> | <a href="?disconnect">Déconnexion</a>
-
+    <a href="./">Accueil</a> | <a href="./admin.php">Administration</a> | <a href="?disconnect">Déconnexion</a>
 </nav>
-<h3>Accueil de l'administration</h3>
+<h3>Page de profil</h3>
 </body>
 </html>

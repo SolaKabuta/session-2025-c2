@@ -1,0 +1,10 @@
+# protection du fichier de configuration de production
+config-prod.php
+# protection du fichier de configuration de tests
+config-test.php
+# protection des données dans data * tout le dossier
+/data/*
+# sauf le fichier ci-dessous
+!/data/exemple5mvc-structure-datas-01.sql
+!/data/exemple5mvc-structure-datas-02.sql
+!/data/exemple5mvc-structure-datas-02-mdb.sql
